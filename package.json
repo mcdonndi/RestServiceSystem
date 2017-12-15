@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/mcdonndi/RestServiceSystem#readme",
   "dependencies": {
-    "cluster": "^0.7.7"
+    "cluster": "^0.7.7",
+    "nodegit": "^0.20.3"
   }
 }
