@@ -3,13 +3,14 @@ const http = require('http');
 const numCPUs = require('os').cpus().length;
 const Repo = require('../modules/git_repo');
 const REPOSITORY = 'https://github.com/mcdonndi/DistributedFileSystem.git';
+const DIRECTORY = 'master';
 
 let nums = [1,2,3,4,5,6,7,8,9,10,11,12];
 let workers = [];
 
 if (cluster.isMaster) {
     console.log(`Master ${process.pid} is running`);
-    let repo = new Repo(REPOSITORY);
+    let repo = new Repo(REPOSITORY, DIRECTORY);
     repo.cloneRepo();
     let allTotal = 0;
 
